@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Profile Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #81ecec, #55efc4); /* Updated to a greenish gradient */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00b894; /* Green border */
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.1);
+        }
+
+        .admin-name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2d3436;
+        }
+
+        .admin-info {
+            font-size: 16px;
+            color: #636e72;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-button {
+            padding: 12px 25px;
+            background-color: #00b894; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            max-width: 250px;
+            transition: background-color 0.3s, transform 0.3s;
+            outline: none;
+        }
+
+        .profile-button:hover {
+            background-color: #019874; /* Darker green on hover */
+            transform: translateY(-3px);
+        }
+
+        .alerts-section {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .alert {
+            background-color: #d4edda; /* Light green background for alert */
+            color: #155724; /* Dark green text for alert */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 6px solid #28a745; /* Green border */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert a {
+            color: #155724; /* Green text for links */
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .alert a:hover {
+            color: #0c4c33; /* Darker green on hover */
+        }
+
+        .decorative-circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 184, 148, 0.1); /* Greenish decorative circle */
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Decorative Circle -->
+        <div class="decorative-circle"></div>
+        
+        <!-- Profile Picture -->
+        <img src="admin-picture.jpg" alt="Administration Profile Picture" class="profile-picture">
+        
+        <!-- Admin Name and Information -->
+        <div class="admin-name">Mr. Surya Yadav</div>
+        <div class="admin-info">Position: Head of Administration Department<br>Experience: 15 Years</div>
+        
+        <!-- Alerts Section -->
+        <div class="alerts-section">
+            <h3>Upcoming Service Alerts</h3>
+            <div class="alert">
+                Facility Maintenance - Next Inspection: <a href="#">12th October 2024</a>
+            </div>
+            <div class="alert">
+                Fire Safety Check - Next Check: <a href="#">5th November 2024</a>
+            </div>
+            <div class="alert">
+                Water Purification System - Service Expiry: <a href="#">22nd September 2024</a>
+            </div>
+            <div class="alert">
+                School Bus Maintenance - Service Expiry: <a href="#">18th October 2024</a>
+            </div>
+        </div>
+        
+        <!-- Button to Check Dates of Amenities -->
+        <div class="button-container">
+            <button class="profile-button">Check All Service Dates</button>
+        </div>
+    </div>
+</body>
+</html>

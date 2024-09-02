@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Homepage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #81ecec, #55efc4); /* Green gradient background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .homepage-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Adjusted width to 90% */
+            max-width: 300px; /* Maximum width further reduced */
+            padding: 10px; /* Further reduced padding */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-picture {
+            width: 70px; /* Further reduced size */
+            height: 70px; /* Further reduced size */
+            border-radius: 50%;
+            object-fit: contain; /* Ensures the image is not cropped */
+            border: 2px solid #00b894; /* Green border */
+            margin-bottom: 8px; /* Adjusted margin */
+            transition: transform 0.3s;
+        }
+
+        .teacher-picture:hover {
+            transform: scale(1.1);
+        }
+
+        .teacher-name {
+            font-size: 18px; /* Further reduced font size */
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2d3436;
+        }
+
+        .teacher-info {
+            font-size: 11px; /* Further reduced font size */
+            color: #636e72;
+            margin-bottom: 8px; /* Adjusted margin */
+        }
+
+        .section-container {
+            text-align: left;
+            margin-top: 8px; /* Further reduced margin */
+            margin-bottom: 8px; /* Further reduced margin */
+            background-color: #d4edda; /* Light green background for sections */
+            padding: 6px; /* Further reduced padding */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-container h3 {
+            font-size: 14px; /* Further reduced font size */
+            color: #155724; /* Dark green heading */
+            margin-bottom: 5px; /* Adjusted margin */
+        }
+
+        .section-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-container li {
+            margin-bottom: 4px; /* Further reduced margin */
+            color: #155724; /* Dark green text */
+        }
+
+        .button-container {
+            margin-top: 8px; /* Further reduced margin */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .action-button {
+            padding: 5px 10px; /* Further reduced padding */
+            background-color: #00b894; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 15px; /* Reduced border radius */
+            cursor: pointer;
+            font-size: 10px; /* Further reduced font size */
+            transition: background-color 0.3s, transform 0.3s;
+            outline: none;
+            width: 48%;
+        }
+
+        .action-button:hover {
+            background-color: #019874; /* Darker green on hover */
+            transform: translateY(-3px);
+        }
+
+        .decorative-circle {
+            position: absolute;
+            width: 60px; /* Further reduced size */
+            height: 60px; /* Further reduced size */
+            background-color: rgba(0, 184, 148, 0.1); /* Greenish decorative circle */
+            border-radius: 50%;
+            top: -10px; /* Adjusted position */
+            right: -10px; /* Adjusted position */
+        }
+    </style>
+</head>
+<body>
+    <div class="homepage-container">
+        <!-- Decorative Circle -->
+        <div class="decorative-circle"></div>
+        
+        <!-- Teacher Picture -->
+        <img src="CUSTOM IAMGE.JPG" alt="Teacher Profile Picture" class="teacher-picture">
+        
+        <!-- Teacher Name and Information -->
+        <div class="teacher-name">Ms. Emily Johnson</div>
+        <div class="teacher-info">Mathematics Teacher<br>Grade: 8-10</div>
+        
+        <!-- Class Timetable Section -->
+        <div class="section-container">
+            <h3>Class Timetable</h3>
+            <ul>
+                <li>Monday: Algebra - 9:00 AM to 10:30 AM</li>
+                <li>Wednesday: Geometry - 11:00 AM to 12:30 PM</li>
+                <li>Friday: Calculus - 1:30 PM to 3:00 PM</li>
+            </ul>
+        </div>
+        
+        <!-- Student Attendance Section -->
+        <div class="section-container">
+            <h3>Student Attendance</h3>
+            <ul>
+                <li>John Doe: Present</li>
+                <li>Jane Smith: Absent</li>
+                <li>Michael Brown: Present</li>
+            </ul>
+        </div>
+        
+        <!-- Student Progress Section -->
+        <div class="section-container">
+            <h3>Student Progress</h3>
+            <ul>
+                <li>John Doe: 85%</li>
+                <li>Jane Smith: 92%</li>
+                <li>Michael Brown: 78%</li>
+            </ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-container">
+            <button class="action-button">Join Class Video Call</button>
+            <button class="action-button">View Detailed Progress</button>
+        </div>
+    </div>
+</body>
+</html>

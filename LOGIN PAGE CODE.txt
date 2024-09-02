@@ -1,0 +1,128 @@
+-------------------------------------------------------LOGIN PAGE CODE(HTML/CSS/SCRIPT)----------------------------------------------------------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First login page</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('your-image.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .input-field {
+            margin-bottom: 18px;
+        }
+
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-field input, .input-field select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <!-- Form element with an id for JavaScript handling -->
+        <form id="loginForm">
+            <div class="input-field">
+                <label for="unique-id">Unique ID</label>
+                <input type="text" id="unique-id" name="unique-id" required>
+            </div>
+            <div class="input-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-field">
+                <label for="roll-number">Roll Number</label>
+                <input type="text" id="roll-number" name="roll-number" required>
+            </div>
+            <!-- Password Field -->
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Dropdown Menu -->
+            <div class="input-field">
+                <label for="user-type">User Type</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+        const form = document.getElementById('loginForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the form values
+            const uniqueId = document.getElementById('unique-id').value;
+            const name = document.getElementById('name').value;
+            const rollNumber = document.getElementById('roll-number').value;
+            const password = document.getElementById('password').value;
+            const userType = document.getElementById('user-type').value;
+
+            // Display the form values (You can replace this with actual processing code)
+            alert('Form Submitted!\nUnique ID: ' + uniqueId + '\nName: ' + name + '\nRoll Number: ' + rollNumber + '\nPassword: ' + password + '\nUser Type: ' + userType);
+        });
+    </script>
+</body>
+</html>
+
